@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	/*background: #323A46;*/
+	background: #00BEC9;
+	font-family: Arial;
+}
+.contenedor{
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+header{
+	/*background: #EB4A33;*/
+	background: #6A52F8;
+	margin: 20px 0; 
+}
+
+header h1{
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+}
+.main{
+	/*width: 700px;*/
+	width: 70%;
+	background: #fff;
+	padding: 20px;
+	float: left;
+	box-sizing:border-box;
+}
+.main img{
+	width: 100%;
+	height: auto;
+}
+aside img{
+	width: 100%;
+	height: auto;
+}
+aside{
+	/*width: 300px;*/
+	width: 30%;
+	padding: 20px;
+	box-sizing:border-box;
+	background: #99B3FF;
+	float: left;
+
+}
+footer{
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	box-sizing:border-box;
+	width: 100%;
+	padding: 20px;
+	color: #fff;
+	background: #000;
+
+}
+
+@media screen and (max-width: 800px){
+	.main{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+		background: #fff;
+	}
+	aside img{
+	width: 60%;
+	height: auto;
+	padding-left: 20%;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.contenedor{
+		width: 100%;
+	}
+	aside{
+		display: none;
+	}
+}
+.centrar{
+	text-align: center;
+}	
+.modulos{
+	padding: 30px;
+
+}
+.subtitle{
+	color: #fff;
+	text-align: center;
+	background: #000;
+}
