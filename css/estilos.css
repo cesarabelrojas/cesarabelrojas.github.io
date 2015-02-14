@@ -96,3 +96,10 @@ footer{
 	text-align: center;
 	background: #000;
 }
+a:link   
+{   
+ text-decoration:none;   
+}
+p{
+	font-family: Arial;
+}
