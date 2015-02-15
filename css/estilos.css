@@ -117,3 +117,14 @@ a:active {
 text-decoration: none;
 color: #000;
 }
+
+.nombreweb{
+	color: #fff;
+}
+#nombreWeb{
+	background: #000;
+	padding-top: 10px;
+}
+.site{
+	padding-top: 5px;
+}
