@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>..:: Ejercicio P2P obligatorio ::..</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	body{
+		font-family: 'Open Sans', sans-serif;
+		color: #4e4e4e;
+		font-size: 14px;	
+		/*background-color: #000;*/
+		
+
+background: rgba(224,239,249,1);
+background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(181,198,208,1) 32%, rgba(191,206,215,1) 44%, rgba(209,220,227,1) 65%, rgba(216,225,231,1) 73%, rgba(242,246,248,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(224,239,249,1)), color-stop(32%, rgba(181,198,208,1)), color-stop(44%, rgba(191,206,215,1)), color-stop(65%, rgba(209,220,227,1)), color-stop(73%, rgba(216,225,231,1)), color-stop(100%, rgba(242,246,248,1)));
+background: -webkit-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(181,198,208,1) 32%, rgba(191,206,215,1) 44%, rgba(209,220,227,1) 65%, rgba(216,225,231,1) 73%, rgba(242,246,248,1) 100%);
+background: -o-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(181,198,208,1) 32%, rgba(191,206,215,1) 44%, rgba(209,220,227,1) 65%, rgba(216,225,231,1) 73%, rgba(242,246,248,1) 100%);
+background: -ms-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(181,198,208,1) 32%, rgba(191,206,215,1) 44%, rgba(209,220,227,1) 65%, rgba(216,225,231,1) 73%, rgba(242,246,248,1) 100%);
+background: linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(181,198,208,1) 32%, rgba(191,206,215,1) 44%, rgba(209,220,227,1) 65%, rgba(216,225,231,1) 73%, rgba(242,246,248,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+
+
+
+	}
+	#contenedor{
+		width: 80%;
+		max-width: 800px;
+		margin: 0 auto;
+		overflow: hidden;
+		background-color: #fff;
+		padding: 20px;
+
+
+	}
+	.fondo{
+		background-color: #F3F3F3;
+		padding: 15px;
+	}
+	.centrar{
+		text-align: justify;
+	}
+	a:link {
+color: blue;
+
+}
+a{
+	color: blue;
+}
+#fecha{
+	color: #007FFF;
+	font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div id="contenedor">
+
+	<p>
+		<br>
+		<span style="color:#fff;">
+		<span style="background-color:#f00;">Página 2</span>
+		</span>
+	</p>
+	<h1> Sala de Prensa de Mozilla</h1>
+	<p class="fondo"> Noticias y novedades sobre Mozilla</p>
+	<h3> Firefox presenta una nueva versión de Firefox centrada en juegos</h3>
+	<p>
+	<p id="fecha"><b> <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script> - 
+    <script>
+     
+    var fecha= new Date()
+    var horas= fecha.getHours()
+    var minutos = fecha.getMinutes()
+    var segundos = fecha.getSeconds()
+     
+    document.write(horas + ":" + minutos)
+     
+    </script></b>
+</p>
+
+	<span style="line-height: 1.4;" class="centrar">Mozilla demuestra que la Web es una plataforma de juegos de gran alcance con la creación de nuevas tecnologías y herramientas de desarrollo que permiten a los creadores de juegos portar sus títulos más populares a la Web.</span>
+	</p>
+
+	<p>
+	<span style="line-height: 1.4;" class="centrar">Uno de los pioneros que utilizan estas tecnologías es Trendy Entertainment, que está potenciando Emscripten y asm.js para traer su popular título Dungeon Defenders a la web. Trendy ha anunciado hoy que lanzará una versión de Dungeon Defenders Eternity con los mismos efectos visuales y jugabilidad que la versión de escritorio original, disponible en Internet a velocidades cercanas a las nativas. El juego completo estará disponible para su compra hoy mismo en Steam.</span>
+	</p>
+
+	<span style="line-height: 1.4;" class="centrar">Esto se basa en el impulso de la GDC a principios de este año, donde varios de los grandes nombres de la industria del juego anunciaron que traían sus innovadoras herramientas web a la Web, incluyendo Unity, con su complemento WebGL.</span>
+	</p>
+
+	
+	<span style="color:#00f;">
+	<a href="mod2obligatorio.html">Más información ></a>
+	</span>
+</div>
+</body>
+</html>
