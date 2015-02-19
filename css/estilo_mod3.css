@@ -1,0 +1,85 @@
+body{
+
+	/*background: #00BEC9;*/
+	/*background: #000;*/
+	font-family: Arial;
+		background: rgba(183,222,237,1);
+background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 36%, rgba(113,206,239,1) 76%, rgba(183,222,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(36%, rgba(33,180,226,1)), color-stop(76%, rgba(113,206,239,1)), color-stop(100%, rgba(183,222,237,1)));
+background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 36%, rgba(113,206,239,1) 76%, rgba(183,222,237,1) 100%);
+background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 36%, rgba(113,206,239,1) 76%, rgba(183,222,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 36%, rgba(113,206,239,1) 76%, rgba(183,222,237,1) 100%);
+background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 36%, rgba(113,206,239,1) 76%, rgba(183,222,237,1) 100%);
+
+}
+
+.main{
+	background-color: #fff;
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+    padding: 20px;
+    width: 80%;
+    height: 550px;
+    
+    padding: 1px;
+}
+.header1{
+	background-color: #FFDC73;
+	float: left;
+	width: 100%;
+	height: 15%;	
+	box-shadow: inset 0px 0px 40px #f00,0px 0px 40px #ff0; 
+}
+.nav1{
+	background-color: #BFBFFF;
+	float: left;
+	width: 20%;
+	height: 70%;
+	box-shadow: inset 0px 0px 40px #0000D9,0px 0px 40px #0000D9; 
+}
+.section1{
+	background-color: #00FFFF;
+	float: left;
+	width: 60%;
+	height: 70%;
+}
+.aside1{
+	background-color: #00FF7F;
+	float: left;
+	width: 20%;
+	height: 70%;
+	box-shadow: inset 0px 0px 40px #00B22D,0px 0px 40px #00B22D; 
+}
+.footer1{
+	background-color: #E599FF;
+	clear: both;
+	width: 100%;
+	height: 15%;
+	box-shadow: inset 0px 0px 40px #8500B2,0px 0px 40px #8500B2; 
+}
+#header2{
+	background-color: #FFBFFF;
+	width: 100%;
+	height: 20%;
+	float: left;
+	box-shadow: inset 0px 0px 40px #FF00FF,0px 0px 40px #FF00FF; 
+}
+#article2{
+	background-color: #BFEFFF;
+	width: 100%;
+	height: 60%;
+	float: left;
+	box-shadow: inset 0px 0px 40px #0085B2,0px 0px 40px #0085B2; 
+}
+#footer2{
+	background-color: #4DFFD2;
+	width: 100%;
+	height: 20%;
+	float: left;
+	box-shadow: inset 0px 0px 40px #008C69,0px 0px 40px #008C69; 
+}
+.centrar{
+	text-align: center;
+	color: #fff;
+}
