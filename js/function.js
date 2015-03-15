@@ -40,3 +40,26 @@ function calcular(altura,anchura){
 	
 
 }
+function realizarPregunta(){
+
+	 document.getElementById("respuestaPregunta").innerHTML="";
+
+
+	var respuesta = prompt("¿Capital de España?");
+	if(isNaN(respuesta)){
+
+		respuesta=respuesta.toLowerCase();
+		var cad;
+		cad="";
+		if(respuesta === 'madrid'){
+			cad +="<img src='img/bien.png' style='width:20px;'>";
+			cad +=" Correcto, <b>Madrid</b> es la capital de España.";
+		}else{
+			cad +="<img src='img/mal.jpeg' style='width:20px;'>";
+			cad +="	Su respuesta <b>"+ respuesta +"</b> no es correcta.";
+		}
+			respuestaPregunta.innerHTML=cad;
+	}else{
+		alert("Por favor introduzca un TEXTO");
+	}
+}
