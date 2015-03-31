@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Módulo 6: Objetos, propiedades, métodos, eventos, formularios, sentencia for/in y características avanzadas de objetos, incluyendo acceso a la página Web cargada en el navegador a través del árbol DOM (Document Object Model)</title>
+	<style>
+					* {
+					margin: 0;
+					padding: 0;
+				}
+				body{
+					/*background-image: url("img/js.jpeg");*/
+                                        background-color: #000;
+					/*background: #323A46;*/
+					/*background: #00BEC9;*/
+					font-family: Arial;
+				}
+				.contenedor{
+					width: 80%;
+					max-width: 1000px;
+					margin: 0 auto;
+					overflow: hidden;
+				}
+				header{
+					/*background: #EB4A33;*/
+					background: #6A52F8;
+					margin-top:25px; 
+				}
+
+				header h1{
+					color: #fff;
+					padding: 20px 0;
+					text-align: center;
+				}
+				.main{
+					/*width: 700px;*/
+					margin:0px;
+					width: 100%;
+
+					background: #fff;
+					padding: 20px;
+					float: left;
+					box-sizing:border-box;
+				}
+				.main img{
+					width: 100%;
+					height: auto;
+				}
+
+                                .colorletra{
+                                    color: #000;
+                                }
+                                .centrar{
+					text-align: center;
+				}
+
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+body { font-family: Consolas, monospace; }
+
+h1 { 
+    position: relative; 
+    float: left;
+    font-size:150%;
+}
+
+h1 span {
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    background: white; /* same as background */
+    border-left: .1em solid black;
+    
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    -webkit-animation: typing 5s steps(30, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation: typing 5s steps(30, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+}
+</style>
+</head>
+
+ <body>
+ 	<div class="contenedor">
+		<header>
+                    <h1>Tema 4: Módulo 6</h1>
+                    
+		</header>
+		<section class="main">
+
+		<h1 class='colorletra'>Sentencia For/In</h1>
+		<br>
+		<br>
+		
+		
+		<br>
+                        <script>
+				var y = {x:'hola', y:'que', z:'tal', t: 'estás'}
+                                var cad='';
+                                for (i in y){
+                                    cad +=y[i]+" ";
+                                }
+                                document.write("<span class='colorletra centrar anim'><h1>"+cad+"<span>&nbsp</span></h1></span>");
+                        </script>
+                        
+		</section>
+	<!--<h1>Typing animation by Lea Verou.<span>&nbsp;</span></h1>-->	
+	</div>
+ </body>
+</html>
+
+
