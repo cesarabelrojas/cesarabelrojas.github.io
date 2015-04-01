@@ -49,8 +49,7 @@
         </style>
         <script>
             function realizar_pregunta(){
-                var cad="";
-                var cad1="";
+                var cad=cad1=cad2="";
                 var resultado = document.getElementById("resultado");
                 var respuesta_texto = document.getElementById("respuesta");
                 
@@ -65,7 +64,7 @@
                 if(respuesta === 'cristobal colon'){
                     cad +="<br><img src='img/bien.png' style='width:20px;'>";
                     cad +="  Correcto <b>"+respuesta+"</b> descubrio América";
-                    imagecolon.innerHTML = "<center><img src='img/cristobal_colon.jpeg' style='width:120px;'></center>";
+                    cad2="<center><img src='img/cristobal_colon.jpeg' style='width:120px;'></center>";
                 }else{
                     cad +="<br><img src='img/mal.jpeg' style='width:20px;'>";
                     cad +="  Incorrecto <b>"+ respuesta +"</b> No descubrio América";
@@ -76,6 +75,7 @@
                 }
                 resultado.innerHTML=cad;
                 respuesta_texto.value=cad1;
+                imagecolon.innerHTML = cad2;
             }
             function quitaAcentos(str){
                 for (var i=0;i<str.length;i++){
