@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Módulo 6: Objetos, propiedades, métodos, eventos, formularios, sentencia for/in y características avanzadas de objetos, incluyendo acceso a la página Web cargada en el navegador a través del árbol DOM (Document Object Model)</title>
+	<style>
+       * {
+	margin: 0;
+	padding: 0;
+	}
+	body{
+            
+	/*background-image: url("img/reloj.png");*/
+         background-color: #fff;
+	/*background: #323A46;*/
+	/*background: #00BEC9;*/
+	font-family: Arial;
+	}
+	.contenedor{
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	}
+	header{
+	/*background: #EB4A33;*/
+	background: #6A52F8;
+	margin-top:25px; 
+	}
+
+	header h1{
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+        border-radius: 7px;
+		}
+	.main{
+	/*width: 700px;*/
+	margin:0px;
+	width: 100%;
+        background: #fff;
+	padding: 20px;
+	float: left;
+	box-sizing:border-box;
+	}
+	.main img{
+		width: 100%;
+		height: auto;
+	}
+
+        .colorletra{
+                 color: #000;
+          }
+        .centrar{
+	text-align: center;
+        font-size: 60px;
+	}
+        .titulo{
+            background-color: #000;
+            color: #fff;
+        }
+
+        #reloj{
+            background: none repeat scroll 0 0 #000000;
+            /*background-color: #000;*/
+            color: #fff;
+            border: 7px solid #efefef;
+            border-radius: 5px;
+            box-shadow: 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 0 5px 20px -10px rgba(0, 0, 0, 1);
+            display: inline-block;
+            overflow: hidden;
+            padding: 10px;
+            position: relative;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+            font-family: digital, arial, verdana;
+            line-height: 40px;
+            /*position: absolute;*/
+            text-align: center;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+            font-size: 30px;
+        }
+</style>
+    <script type="text/javascript">
+    var t;
+     
+     function inicia(){
+         t=setInterval(mostrar_fecha, 1); 
+     } 
+    function cambiar_reloj(){
+        if(!t){
+            inicia();
+        }else{
+            detener();
+        }
+    }
+    function detener(){
+        clearInterval(t);
+        t=undefined; 
+    }
+    function mostrar_fecha( ) {
+      var fecha = new Date();
+      var cl = document.getElementById("reloj");
+      var cad=(fecha.getHours() + " horas "
+              + fecha.getMinutes() + " minutos "
+              + fecha.getSeconds() + " segundos "
+              + fecha.getMilliseconds() + " ms ");
+      cl.innerHTML = cad;  
+    }
+    
+    </script>
+</head>
+
+ <body>
+ 	<div class="contenedor">
+		<header>
+                    <h1 class="titulo">Tema 5: Módulo 6</h1>
+                    
+		</header>
+		<section class="main">
+
+		<h1 class='colorletra centrar'>RELOJ</h1>
+		<br>
+		<br>
+		
+		
+		<br>
+                <center>
+                    <div id="reloj"><div>
+                </center>
+                        <script type="text/javascript">
+                            
+                            inicia(); //esta funcion inicia el reloj
+                            
+                            var parar = document.getElementById("reloj");
+                            parar.addEventListener("click", cambiar_reloj, false);  
+                         </script>
+		</section>
+	<!--<h1>Typing animation by Lea Verou.<span>&nbsp;</span></h1>-->	
+	</div>
+ </body>
+</html>
+
+
