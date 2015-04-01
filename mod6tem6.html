@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>..::Módulo 6::..</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                /*background-image: url("img/viajes_colon.jpeg");*/
+                background-color: #E0E0E0;
+                /*font-family: verdana;*/
+                font: 100% sans-serif; 
+            }
+            .contenedor{
+                width: 60%;
+                max-width: 1000px;
+                margin: 0 auto;
+                overflow: hidden;
+                padding: 15px;
+                background-color: #fff;
+            }
+            header{
+                /*background: #EB4A33;*/
+                background: #00BCF2;
+                margin-top:25px; 
+            }
+            header h1{
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+                border-radius: 7px;
+		}
+            .contenedor_section{
+                padding: 20px;
+                /*background-color: #EB4A33;*/
+            }
+            section{
+                width: 50%;
+                float: left;
+            }
+            aside{
+                float: left;
+                width: 10%;
+                padding: 20px;
+            }
+        </style>
+        <script>
+            function realizar_pregunta(){
+                var cad="";
+                var cad1="";
+                var resultado = document.getElementById("resultado");
+                var respuesta_texto = document.getElementById("respuesta");
+                
+                var imagecolon=document.getElementById("image_colon");
+                
+                
+                respuesta = respuesta_texto.value;
+                
+                if(respuesta !== ""){
+                respuesta= quitaAcentos(respuesta);
+                respuesta = respuesta.toLowerCase();
+                if(respuesta === 'cristobal colon'){
+                    cad +="<br><img src='img/bien.png' style='width:20px;'>";
+                    cad +="  Correcto <b>"+respuesta+"</b> descubrio América";
+                    imagecolon.innerHTML = "<center><img src='img/cristobal_colon.jpeg' style='width:120px;'></center>";
+                }else{
+                    cad +="<br><img src='img/mal.jpeg' style='width:20px;'>";
+                    cad +="  Incorrecto <b>"+ respuesta +"</b> No descubrio América";
+                    cad1 ="pruebe otra vez";
+                }
+                }else{
+                    alert("Por favor ingresa un nombre");
+                }
+                resultado.innerHTML=cad;
+                respuesta_texto.value=cad1;
+            }
+            function quitaAcentos(str){
+                for (var i=0;i<str.length;i++){
+                //Sustituye "á é í ó ú"
+                if (str.charAt(i)=="á") str = str.replace(/á/,"a");
+                if (str.charAt(i)=="é") str = str.replace(/é/,"e");
+                if (str.charAt(i)=="í") str = str.replace(/í/,"i");
+                if (str.charAt(i)=="ó") str = str.replace(/ó/,"o");
+                if (str.charAt(i)=="ú") str = str.replace(/ú/,"u");
+                }
+                return str;
+            } 
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Tema 6: Ejercicio P2P opcional</h1>
+            </header>
+            <section>
+               <div class="contenedor_section">
+                   
+                    <h4> Pregunta </h4><br>
+                    <p> ¿Quien descubrió América? </p><br> 
+
+                    <input type="text" id="respuesta" placeholder="responda aquí">
+
+                    <button type="button" onclick="realizar_pregunta();">consultar</button><br>
+                    <div id="resultado" /></div>
+
+                </div>
+            </section>
+            <aside>
+                <div id="image_colon"></div>
+            </aside>
+        </div>
+    </body>
+</html>
