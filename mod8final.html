@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<title>Cronómetro practica 8</title><meta charset="UTF-8">
+<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" > </script>
+<script type="text/javascript" src="http://zeptojs.com/touch.js" ></script>
+<script type="text/javascript">
+$(function(){
+    localStorage.c = (localStorage.c || "0.0");
+
+    var cl = $("#crono");
+    var t ;
+    var pau = $("#pausas");
+
+    function incr()     { localStorage.c = +localStorage.c + 0.1; };
+    function mostrar()  { cl.html((+localStorage.c).toFixed(1)); };
+    function arrancar() { t=setInterval(function(){incr(); mostrar()}, 100);};
+    function parar()    { clearInterval(t);  t=undefined; registro(); };
+    function cambiar()  { if (!t) arrancar(); else parar(); };
+    function registro() { 
+        pau.append("<p>" + (+localStorage.c).toFixed(1) + "</p>"); 
+    };
+    function limpiar() { pau.html(""); }; 
+    function inicializar() { 
+        if (t === undefined) {
+            localStorage.c="0.0"; 
+            mostrar(); 
+            limpiar(); 
+        };
+    };
+  
+  if ( typeof window.ontouchstart !== 'undefined') {
+    $("body").on('tap', cambiar);
+    $("body").on('swipe', inicializar);
+    
+    } else {
+    $("#cambiar").on('click', cambiar);
+    $("#inicializar").on('click', inicializar); mostrar();}
+  });
+    
+</script>
+<style type="text/css">
+#imgCrono
+{
+   width: 200px;
+   height: 300px;
+   position: relative;
+}
+
+#crono
+  {
+    position: absolute;
+    bottom: 140px;
+    left: 105px;
+    font-size: 2em;
+}
+h2
+  {
+    margin-left: 80px;
+    color: RED
+  }
+#cambiar
+  {
+    margin-left: 30px;
+    color: blue
+  }
+#inicializar
+  {
+    margin-left: 45px;
+    color: red
+  }
+</style>  
+</head>
+<body>
+<h2>CRONO</h2>
+
+<div id="imgCrono"><img src="http://noway.neocities.org/Crono.png" width= "250"/>
+    <span id="crono">0.0</span>
+</div> 
+
+
+<button type="button" id="cambiar"> Star/Stop </button>
+<button type="button" id="inicializar">  Reset </button>
+
+<h4>Lista de paradas</h4>
+<div id="pausas"></div>
+  
+
+  
+</body>
+</html>
