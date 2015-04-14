@@ -1,0 +1,114 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+body{
+	height: 100%;
+}
+iframe {
+  padding:10px;
+  border:5px solid #D2D2D2;
+  background-color:white;
+  width:390px;
+  height:350px;
+}
+
+#iframes {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap:wrap;
+}
+
+#marco {
+    background-color: #D2D2D2;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+}
+.letra_url{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    background-color: #00BCF2;
+    border:3px solid #D2D2D2;
+  
+}
+a{
+  color: #fff;  
+}
+</style>
+
+<!--<script type="text/javascript" src="zepto.min.js" >-->
+<!--<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" ></script>-->
+    <script src="js/jquery.js"></script>
+
+
+<script type="text/javascript">
+$(function(){
+  var urls = ["http://getbootstrap.com","http://vishub.org"];
+
+  function mostrar(urls) {
+    var i, iframes="";
+    for (i=0;  i < urls.length;  ++i) {
+      iframes += "<div class='iframe'><div class='letra_url'>URL_"+(i+1)+"</div><div class='letra_url'><a href='"+urls[i]+"' target='_black'>"+urls[i]+"</a></div>>";
+      iframes += "<iframe src='" + urls[i] + "'></iframe></div>";
+
+    }
+    $('#iframes').html(iframes);
+  };
+
+  $("#boton").on('click', function(){
+    urls.push($('#nuevo').val());
+    mostrar(urls);
+  });
+  
+  $("#botonBorrar").on('click', function(){
+   var id_url = $('#url_borrar').val();
+   if(!isNaN(id_url)){
+       if(id_url !=''){
+           
+           if( id_url <= urls.length){
+                if(id_url != 0){  
+                    urls.splice((id_url-1),1);
+                    mostrar(urls);
+                }else{
+                    alert("No existe la URL que ingreso");
+                }
+            }else{
+                alert("No existe la URL que ingreso");
+            }
+        }else{
+            alert("Por favor ingrese un numero");  
+        }
+   }else{
+       alert("Por favor ingrese un numero");
+   }    
+    
+  });
+
+  mostrar(urls);
+});
+</script>
+</head>
+
+<body>
+<center><h1>Ejemplos de diseño responsivo</h1></center>
+
+<center>
+<input type="text" id="nuevo"  placeholder="Nuevo URL"/>
+<button type="button" id="boton"> Añadir </button>
+
+<input type="text" id="url_borrar"  placeholder="URL a borrar"/>
+<button type="button" id="botonBorrar"> Borrar </button>
+</center>
+<p>
+<div  id='marco'><div id="iframes" /></div></div>
+
+</body>
+</html>
