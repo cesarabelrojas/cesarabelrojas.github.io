@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>Event Example</title><meta charset="UTF-8">
+<head><title>Eventos Tactiles con Java Script</title><meta charset="UTF-8">
 <script type="text/javascript" src="js/zepto.min.js" > </script>
 <script type="text/javascript" src="js/touch.js" > </script>
 <script type="text/javascript">
@@ -24,17 +24,137 @@
     reloj.on('swipeRight', function(){ 
         cl.html("0.0"); 
     });
+    
+    reloj.on('swipeLeft', function(){ 
+        cl.html("0.0"); 
+    });
    // $("#cambiar").on('click', cambiar);
    // $("#inicializar").on('click', function(){ cl.html("0.0"); });
   });
 </script>
+
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+}
+body{
+	/*background: #323A46;*/
+	background: #00BEC9;
+	font-family: Arial;
+}
+.contenedor{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+header{
+	/*background: #EB4A33;*/
+	background: #6A52F8;
+	margin: 20px 0; 
+}
+
+header h1{
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+}
+.main{
+	/*width: 700px;*/
+	width: 100%;
+	background: #fff;
+	padding: 20px;
+	float: left;
+	box-sizing:border-box;
+}
+.main img{
+	width: 80%;
+	height: auto;
+}
+
+footer{
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	box-sizing:border-box;
+	width: 100%;
+	padding: 20px;
+	color: #fff;
+	background: #000;
+
+}
+
+@media screen and (max-width: 800px){
+	.main{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+		background: #fff;
+	}
+	aside img{
+	width: 60%;
+	height: auto;
+	padding-left: 20%;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.contenedor{
+		width: 100%;
+	}
+	
+}
+.centrar{
+	text-align: center;
+}	
+.modulos{
+	padding: 30px;
+
+}
+.subtitle{
+	color: #fff;
+	text-align: center;
+	background: #000;
+}
+
+p{
+	font-family: Arial;
+}
+
+
+
+.nombreweb{
+	color: #fff;
+}
+#nombreWeb{
+	background: #000;
+	padding-top: 10px;
+}
+.site{
+	padding-top: 5px;
+}
+
+</style>
+
 </head>
 <body>
-<h2>Cronómetro</h2>
-<img src="img/reloj.jpeg" alt="miriadaX" id="reloj">
-<h2><span id="crono"> 0.0 </span> segundos </h2>
+    <div class="contenedor">
+        <section class="main">
+            <h2 class="centrar">CRONÓMETRO</h2>
+        <center><img src="img/reloj.jpeg" alt="miriadaX" id="reloj"></center>
+        <center><h2><span id="crono"> 0.0 </span> segundos </h2></center>
 
-<!--<button type="button" id="cambiar"> arrancar/parar </button>
-<button type="button" id="inicializar">  inicializar </button>-->
+        <!--<button type="button" id="cambiar"> arrancar/parar </button>
+        <button type="button" id="inicializar">  inicializar </button>-->
+        </section>
+        <footer>
+			<p class="centrar">
+				Copyright 2015 © - Cesar A. Rojas. 
+			</p>
+			<h6 class="centrar site">This website is responsive design.</h6>
+		</footer>
+    </div>
 </body>
 </html>
