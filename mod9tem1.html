@@ -1,0 +1,68 @@
+<!DOCTYPE html><html>
+<head><title>Relos SVG</title><meta charset="UTF-8">
+<script type="text/javascript" src="js/zepto.min.js" ></script>
+<style>
+    
+    body, html {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: #5C2D91;
+    }
+    #reloj{
+        height: 100%;
+	width: 100%;
+    }
+    h1{
+        text-align: center;
+        font-size: 55px;
+        color: #fff;
+    }
+    #tex{
+        text-shadow: 0 1em 0.2em #666666;
+    }
+</style>
+<script>
+  function animar() { 
+    var d = new Date();
+    var s = d.getSeconds();   // grados = segundos * 6 
+    var m = d.getMinutes();   // grados = minutos * 6 
+    var h = d.getHours();
+    var ms = d.getMilliseconds(); 
+    var hh = h*30 + m/2;  // grados de la manecilla de horas
+    $("#tex").html(h + ":" + m + ":" + s + ":" + ms );
+    $("#hor").attr("transform", "rotate(" + hh + " 80 80)");
+    $("#min").attr("transform", "rotate(" + m*6 + " 80 80)");
+    $("#seg").attr("transform", "rotate(" + s*6 + " 80 80)");
+    $("#mseg").attr("transform", "rotate(" + ms + " 80 80)");
+  }
+  $(function(){
+    setInterval(animar, 1);
+    animar();
+  })
+</script>  
+</head>
+    <body>
+    <h1>RELOJ</h1>
+
+    <!--<div id="tex">texto</div>-->
+
+        <svg id="reloj" viewBox="-10 25 180 150">
+          <circle id='myCircle'  cx='80' cy='80' r='50'
+                  fill='white' stroke='black'  stroke-width='3' />
+          
+          <line id="hor" x1='80' y1='80' x2='80' y2='50'
+                style='stroke:grey;stroke-width:5'/>
+          <line id="min" x1='80' y1='80' x2='80' y2='40'
+                style='stroke:grey;stroke-width:3'/>
+          <line id="seg" x1='80' y1='80' x2='80' y2='30'
+                style='stroke:red;stroke-width:1'/>
+          <line id="mseg" x1='80' y1='80' x2='80' y2='30'
+                style='stroke:green;stroke-width:.3'/>
+          
+            <text id="tex" x="60" y="40" fill="black" transform="rotate(30 20,20)"></text>
+         
+        </svg>
+    </body>
+</html>
