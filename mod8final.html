@@ -3,8 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <title>Cronómetro practica 8</title><meta charset="UTF-8">
-<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" > </script>
-<script type="text/javascript" src="http://zeptojs.com/touch.js" ></script>
+<!--<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" > </script>
+<script type="text/javascript" src="http://zeptojs.com/touch.js" ></script>-->
+<script type="text/javascript" src="js/zepto.min.js" > </script>
+<script type="text/javascript" src="js/touch.js" ></script>
 <script type="text/javascript">
 $(function(){
     localStorage.c = (localStorage.c || "0.0");
@@ -19,7 +21,7 @@ $(function(){
     function parar()    { clearInterval(t);  t=undefined; registro(); };
     function cambiar()  { if (!t) arrancar(); else parar(); };
     function registro() { 
-        pau.append("<p>" + (+localStorage.c).toFixed(1) + "</p>"); 
+        pau.append("<center><b>" + (+localStorage.c).toFixed(1) + "</b></center>"); 
     };
     function limpiar() { pau.html(""); }; 
     function inicializar() { 
@@ -31,16 +33,23 @@ $(function(){
     };
   
   if ( typeof window.ontouchstart !== 'undefined') {
-    $("body").on('tap', cambiar);
-    $("body").on('swipe', inicializar);
+    $("#cambiar").on('tap', cambiar);
+    $("#inicializar").on('swipe', inicializar);
     
     } else {
     $("#cambiar").on('click', cambiar);
     $("#inicializar").on('click', inicializar); mostrar();}
   });
-    
+
+ 
 </script>
 <style type="text/css">
+    body{
+        background-color: #5C2D91;
+        font-family: sans-serif;
+        
+
+    }
 #imgCrono
 {
    width: 200px;
@@ -57,8 +66,15 @@ $(function(){
 }
 h2
   {
-    margin-left: 80px;
-    color: RED
+    margin-left: 40px;
+    color: #fff;
+    font-size: 30px;
+  }
+  h4{
+      color: #fff;
+  }
+  .color{
+      color: #fff;
   }
 #cambiar
   {
@@ -70,22 +86,27 @@ h2
     margin-left: 45px;
     color: red
   }
+  
+
 </style>  
 </head>
 <body>
-<h2>CRONO</h2>
-
-<div id="imgCrono"><img src="http://noway.neocities.org/Crono.png" width= "250"/>
-    <span id="crono">0.0</span>
-</div> 
 
 
-<button type="button" id="cambiar"> Star/Stop </button>
-<button type="button" id="inicializar">  Reset </button>
+<center>
+    <h2>CRONÓMETRO</h2>
+    <!--<div id="imgCrono"><img src="http://noway.neocities.org/Crono.png" width= "250"/>-->
+    <div id="imgCrono"><img src="img/Crono.png" width= "250"/>
+        <span id="crono">0.0</span>
+    </div> 
 
-<h4>Lista de paradas</h4>
-<div id="pausas"></div>
-  
+
+    <button type="button" id="cambiar"> <b>Star/Stop</b> </button>
+    <button type="button" id="inicializar"> <b> Reset</b> </button>
+
+    <h4>Lista de paradas</h4>
+    <div id="pausas" class="color"></div>
+</center>  
 
   
 </body>
