@@ -2,12 +2,12 @@
   "version": "1.0",
   "name": "Cronometro,
   "description": "Cronometro",
-  "launch_path": "/hosted/mod8final.html",
+  "launch_path": "/mod8final.html",
 
   "icons": {
-    "16":  "/hosted/ico_16.png",
-    "48":  "/hosted/ico_48.png",
-    "128": "/hosted/ico_128.png"
+    "16":  "/ico_16.png",
+    "48":  "/ico_48.png",
+    "128": "/ico_128.png"
   },
   "developer": {
     "name": "Cess",
