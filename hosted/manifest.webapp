@@ -5,9 +5,9 @@
   "launch_path": "http://cesarabelrojas.github.io/hosted/mod8final.html",
 
   "icons": {
-    "16":  "/hosted/ico_16.png",
-    "48":  "/hosted/ico_48.png",
-    "128": "/hosted/ico_128.png"
+    "16":  "http://cesarabelrojas.github.io/hosted/ico_16.png",
+    "48":  "http://cesarabelrojas.github.io/hosted/ico_48.png",
+    "128": "http://cesarabelrojas.github.io/hosted/ico_128.png"
   },
   "developer": {
     "name": "Cess",
