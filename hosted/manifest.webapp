@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Cronometro,
   "description": "Cronometro",
-  "launch_path": "/hosted/mod8final.html",
+  "launch_path": "http://cesarabelrojas.github.io/hosted/mod8final.html",
 
   "icons": {
     "16":  "/hosted/ico_16.png",
