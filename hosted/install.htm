@@ -27,7 +27,7 @@
 
       var request = navigator.mozApps.checkInstalled(gManifestName);
       alert(gManifestName);
-      alert(request.onsuccess);
+     // alert(request.onsuccess);
       request.onsuccess = function() {
         if (request.result) {
           // La app ya fue instalada.
