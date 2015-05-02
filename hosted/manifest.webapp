@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Cronometro,
   "description": "Cronometro",
-  "launch_path": "/hosted/mod8final.html",
+  "launch_path": "/hosted/mod8final.htm",
 
   "icons": {
     "16":  "/hosted/ico_16.png",
