@@ -26,7 +26,7 @@ var gManifestName = "http://cesarabelrojas.github.io/hosted/" + 'manifest.webapp
 
 
       var request = navigator.mozApps.checkInstalled(gManifestName);
-      
+      alert(request.onsuccess);
       request.onsuccess = function() {
         if (request.result) {
           // La app ya fue instalada.
