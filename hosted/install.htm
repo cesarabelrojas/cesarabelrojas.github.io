@@ -18,7 +18,7 @@
 
 //var gManifestName = "http://cesarabelrojas.github.io/hosted/manifest.webapp";
 //var gManifestName = "http://cesarabelrojas.github.io/hosted/";
-var gManifestName = "http://cesarabelrojas.github.io/hosted/" + 'manifest.webapp';
+//var gManifestName = "http://cesarabelrojas.github.io/hosted/" + 'manifest.webapp';
     //var gManifestName = location.href.replace("install.htm","") + 'manifest.webapp';
 
 
@@ -26,6 +26,7 @@ var gManifestName = "http://cesarabelrojas.github.io/hosted/" + 'manifest.webapp
 
 
       var request = navigator.mozApps.checkInstalled(gManifestName);
+      alert(gManifestName);
       alert(request.onsuccess);
       request.onsuccess = function() {
         if (request.result) {
