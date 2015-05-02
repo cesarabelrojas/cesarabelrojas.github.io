@@ -4,7 +4,8 @@
 <head>
 <title>Instalador del Cronometro</title>
 <meta charset="UTF-8">
-<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" ></script>
+<!--<script type="text/javascript" src="http://zeptojs.com/zepto.min.js" ></script>-->
+<script type="text/javascript" src="js/zepto.min.js" ></script>
 </head>
 
 <body>
@@ -15,8 +16,9 @@
 
     $(document).ready(function() {
 
-var gManifestName = "http://cesarabelrojas.github.io/hosted/manifest.webapp";
 //      var gManifestName = location.href.replace("install.htm","") + 'manifest.webapp';
+      var gManifestName = "http://cesarabelrojas.github.io/hosted/" + 'manifest.webapp';
+
 
       var request = navigator.mozApps.checkInstalled(gManifestName);
       
